@@ -1,7 +1,7 @@
 const {app, BrowserWindow} = require('electron')
 let win
 function createWindow () {
-    win = new BrowserWindow({width: 320, height: 180, resizable:true, autoHideMenuBar:true})
+    win = new BrowserWindow({width: 360, height: 310, resizable:false, autoHideMenuBar:true})
     win.loadFile('index.html')
     win.webContents.openDevTools()
     win.on('closed', () => {

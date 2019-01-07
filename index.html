@@ -7,21 +7,94 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <title id="titl"></title>
-
+        <style>
+            body{
+                font-family: sans-serif;
+                padding: 0;
+                border: 0;
+                margin: 0;
+            }
+            button{
+                color: white;
+                background-color: #666;
+                font-weight: 800;
+                border: 0;
+                padding: 5px;
+                margin:1px;
+                float: left;
+                min-width: calc(50% - 2px);
+                min-height: 30px;
+            }
+            button:hover{
+                background-color: #777;
+                font-weight: 900;
+                border: 0;
+            }
+            button:disabled{
+                color: #888;
+                background-color: #444;
+                font-weight: 400;
+                border: 0;
+                padding: 5px;
+                margin:1px;
+                float: left;
+                min-width: calc(50% - 2px);
+                min-height: 30px;
+            }
+            div{
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                float: left;
+            }
+            .output{
+                box-sizing: border-box;
+                width: calc(100% - 10px);
+                height: 130px;
+                margin: 3px 0 0 0;
+                padding: 5px;
+                border: 0;
+                float: left;
+                font-family: monospace;
+                overflow-y: scroll;
+                border-top: 1px solid #888;
+            }
+            p{
+                margin: 1px 1px 6px 1px;
+                padding: 0;
+                font-weight: 900;
+                font-size: 14px;
+            }
+            p span{
+                color: green;
+            }
+        </style>
     </head>
     <body>
-        <span>Porta de comunicação: </span>
-        <select class="group1" id="comports" onchange="changeCOM()">
-            
-        </select>
-        <button class="group1" id="com_button" onclick="startCOM()">Iniciar</button>
-        <button class="group2" disabled="true" id="close_button" onclick="closeCOM()">Fechar Conexão</button>
+        <div>
+            <span>Porta de comunicação: </span>
+            <select class="group1" id="comports" onchange="changeCOM()">
+
+            </select>
+        </div>
+        <div>
+            <button id="com_button" onclick="startCOM()">Iniciar</button>
+        </div>
         <br>
-        <button class="group2" disabled="true" id="stop_button" onclick="sendCOM('3')">STOP</button>
-        <button class="group2" disabled="true" id="temp_button" onclick="getCOM('2')">TEMPERATURA</button>
-        <button class="group2" disabled="true" id="mtbf_button" onclick="getCOM('1')">MTBF</button>
+        <div>
+            <button class="group2" disabled="true" id="stop_button" onclick="sendCOM('3')">STOP</button>
+        </div>
+        <div>
+            <button class="group2" disabled="true" id="temp_button" onclick="getCOM('2')">TEMPERATURA</button>
+            <button class="group2" disabled="true" id="mtbf_button" onclick="getCOM('1')">MTBF</button>
+            <button class="group2" disabled="true" id="mtbf_button" onclick="getCOM('5')">FERRAMENTA ATUAL</button>
+            <button class="group2" disabled="true" id="mtbf_button" onclick="getCOM('6')">MÁQUINA</button>
+        </div>
         <br>
+        <div class="output">
         
+        </div>
         <script src="renderer.js"></script>
     </body>
 </html>
