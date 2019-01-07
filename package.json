@@ -1,0 +1,21 @@
+{
+    "name": "icu",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "dependencies": {
+        "electron": "^4.0.0",
+        "electron-store": "^2.0.0",
+        "serialport": "^7.1.1"
+    },
+    "devDependencies": {
+        "electron-rebuild": "^1.8.2",
+        "jquery": "^3.3.1"
+    },
+    "scripts": {
+        "test": "electron ./",
+        "install": "electron-rebuild"
+    },
+    "author": "",
+    "license": "ISC"
+}

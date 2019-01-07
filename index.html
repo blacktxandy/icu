@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title id="titl"></title>
+
+    </head>
+    <body>
+        <span>Porta de comunicação: </span>
+        <select class="group1" id="comports" onchange="changeCOM()">
+            
+        </select>
+        <button class="group1" id="com_button" onclick="startCOM()">Iniciar</button>
+        <button class="group2" disabled="true" id="close_button" onclick="closeCOM()">Fechar Conexão</button>
+        <br>
+        <button class="group2" disabled="true" id="stop_button" onclick="sendCOM('STOP')">STOP</button>
+        <button class="group2" disabled="true" id="temp_button" onclick="getCOM('GET_TEMPERATURE')">TEMPERATURA</button>
+        <button class="group2" disabled="true" id="mtbf_button" onclick="getCOM('GET_MTBF')">MTBF</button>
+        <br>
+        
+        <script src="renderer.js"></script>
+    </body>
+</html>
