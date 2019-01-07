@@ -47,12 +47,12 @@ function changeCOM(){
 }
 
 function sendCOM(comm){
-    if(comm=="START"){
+    if(comm=="4"){
         $('#stop_button').html('STOP');
-        $('#stop_button').attr('onclick',"sendCOM('STOP')");
+        $('#stop_button').attr('onclick',"sendCOM('3')");
     }else{
         $('#stop_button').html('START');
-        $('#stop_button').attr('onclick',"sendCOM('START')");
+        $('#stop_button').attr('onclick',"sendCOM('4')");
     }
     port.write(comm);
 }
